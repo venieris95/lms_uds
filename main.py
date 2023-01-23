@@ -1,5 +1,5 @@
 def main():
-    if check_credentials():
+    if v.check_credentials():
         st.sidebar.title("Select Mode")
         mode = st.sidebar.radio("", ("Student Data", "Reviews", "Analytics", "Visuals", "Report"))
         # STUDENT DATA
