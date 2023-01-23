@@ -1,8 +1,5 @@
-import streamlit as st
-import variables as v
-
-if check_credentials():
-    def main():
+def main():
+    if check_credentials():
         st.sidebar.title("Select Mode")
         mode = st.sidebar.radio("", ("Student Data", "Reviews", "Analytics", "Visuals", "Report"))
         # STUDENT DATA
@@ -25,7 +22,7 @@ if check_credentials():
             if reviews == 'Computer Science Reviews':
                 v.print_statement(v.cs_reviews, v.sorted_review_cs)
             # ANALYSIS
-         if mode == 'Analytics':
+        if mode == 'Analytics':
             st.sidebar.title("Mode 3: Analysis")
             col1, col2 = st.columns(2)
             with col1:
@@ -43,19 +40,17 @@ if check_credentials():
                     st.text("Standard Deviation")
                     st.dataframe(v.courses_std_df)
             # VISUALS
-          if mode == 'Visuals':
+        if mode == 'Visuals':
             st.sidebar.title("Mode 4: Visuals")
             # REPORT
-          if mode == 'Report':
+        if mode == 'Report':
             st.sidebar.title("Mode 5: Report")
             text_contents = 'Students are struggling with CS. Btw, We can report here !!! I like Sushi since it has a lot ' \
                             'of nutrition... '
             st.write(text_contents)
-
             if st.download_button('Download overall report (.txt file)', text_contents):
                 st.write('Thanks for downloading!')
 
 
-    if __name__ == "__main__":
-        main()
-
+if __name__ == "__main__":
+    main()
