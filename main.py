@@ -1,4 +1,5 @@
 import streamlit as st
+import variables
 
 def check_credentials():
     """Returns `True` if the user had a correct password."""
