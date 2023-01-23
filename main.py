@@ -9,11 +9,11 @@ if check_credentials():
         if mode == 'Student Data':
             st.sidebar.title("Mode 1: View student information")
             if st.sidebar.checkbox('Semester1'):
-            st.text("First Semester")
-            st.dataframe(v.first_semester.style)
+                st.text("First Semester")
+                st.dataframe(v.first_semester.style)
             if st.sidebar.checkbox('Semester2'):
-            st.text("Second Semester")
-            st.dataframe(v.second_semester.style)
+                st.text("Second Semester")
+                st.dataframe(v.second_semester.style)
             # REVIEWS
         if mode == "Reviews":
             st.sidebar.title("Mode 2: Reviews")
