@@ -1,3 +1,6 @@
+import streamlit as st
+import variables as v
+
 def main():
     if v.check_credentials():
         st.sidebar.title("Select Mode")
