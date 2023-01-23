@@ -8,7 +8,7 @@ def check_credentials():
         if (
             st.session_state["username"] in st.secrets["credentials"]
             and st.session_state["password"]
-            == st.secrets["passwords"][st.session_state["username"]]
+            == st.secrets["credentials"][st.session_state["username"]]
         ):
             st.session_state["credentials_correct"] = True
             del st.session_state["password"]  # don't store username + password
