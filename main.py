@@ -90,6 +90,6 @@ if check_credentials():
                 st.write('Thanks for downloading!')
 
 
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+        main()
 
