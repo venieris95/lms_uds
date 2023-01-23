@@ -4,12 +4,7 @@ import re
 from stop_words import stopwords
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import plotly.express as px
 import streamlit as st
-import pickle
-from pathlib import Path
-import streamlit_authenticator as stauth
 
 
 # REVIEWS
