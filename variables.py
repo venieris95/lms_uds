@@ -93,8 +93,8 @@ class named_object:
 
 
 # READ FILE
-first_semester = pd.read_csv("data\group_4_semester_1.csv")
-second_semester = pd.read_csv("data\group_4_semester_2.csv")
+first_semester = pd.read_csv("lms_uds/data/group_4_semester_1.csv")
+second_semester = pd.read_csv("lms_uds/data/group_4_semester_2.csv")
 
 # REVIEWS
 # SELECT SPECIFIC COLUMNS
