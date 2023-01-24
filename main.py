@@ -1,6 +1,9 @@
 import streamlit as st
 import variables as v
 
+st.set_page_config(page_title="LMS Dashboard", page_icon="📁", layout="wide")
+
+
 def main():
     if v.check_credentials():
         st.sidebar.title("Select Mode")
