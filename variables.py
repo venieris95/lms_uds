@@ -23,6 +23,7 @@ def check_credentials():
 
     if "credentials_correct" not in st.session_state:
         # First run, show inputs for username + password.
+        st.warning("Credentials: username: hello | password: world")
         st.text_input("Username", on_change=credentials_entered, key="username")
         st.text_input(
             "Password", type="password", on_change=credentials_entered, key="password"
@@ -35,7 +36,6 @@ def check_credentials():
             "Password", type="password", on_change=credentials_entered, key="password"
         )
         st.error("😕 User not known or password incorrect")
-        st.warning("Credentials: username: hello | password: world")
         return False
     else:
         # Password correct.
