@@ -8,6 +8,8 @@ import streamlit as st
 
 def check_credentials():
     """Returns `True` if the user had a correct password."""
+    
+     st.text("Credentials: username: hello | password: world")
 
     def credentials_entered():
         """Checks whether a password entered by the user is correct."""
