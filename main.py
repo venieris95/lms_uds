@@ -12,7 +12,6 @@ import seaborn as sns
 
 st.set_page_config("LSM Dashboard", page_icon=":bar_chart:", layout="wide")
 
-
 def main():
     if v.check_credentials():
         st.sidebar.title("Select Mode")
