@@ -103,6 +103,5 @@ def main():
             if st.download_button('Download overall report (.txt file)', text_contents):
                 st.write('Thanks for downloading!')
 
-
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
