@@ -8,6 +8,7 @@ import streamlit as st
 
 def check_credentials():
     """Returns `True` if the user had a correct password."""
+    st.warning("Credentials: username: hello | password: world")
     def credentials_entered():
         """Checks whether a password entered by the user is correct."""
         if (
@@ -23,7 +24,6 @@ def check_credentials():
 
     if "credentials_correct" not in st.session_state:
         # First run, show inputs for username + password.
-        st.warning("Credentials: username: hello | password: world")
         st.text_input("Username", on_change=credentials_entered, key="username")
         st.text_input(
             "Password", type="password", on_change=credentials_entered, key="password"
