@@ -18,11 +18,11 @@ def main():
         if mode == 'Student Data':
             tab1, tab2 = st.tabs(["First Semester", "Second Semester"])
             with tab1:
-                st.table(v.first_semester.style)
+                st.dataframe(v.first_semester.style)
             with tab2:
                 df2 = v.second_semester
                 df2.drop(df2.columns[[13, 14, 15]], axis=1, inplace=True)
-                st.table(df2)
+                st.dataframe(df2)
             # REVIEWS
         if mode == "Reviews":
             st.sidebar.title("Mode 2: Reviews")
@@ -40,16 +40,16 @@ def main():
                                              "Courses Standard Deviation"])
             with tab1:
                 st.subheader('First Semester Student Grades By Course Category')
-                st.table(v.first_semester_grades)
+                st.da(v.first_semester_grades)
             with tab2:
                 st.subheader('Second Semester Student Grades By Course Category')
-                st.table(v.second_semester_grades)
+                st.dataframe(v.second_semester_grades)
             with tab3:
                 st.subheader('Courses Mean Grades')
-                st.table(v.courses_mean_df)
+                st.dataframe(v.courses_mean_df)
             with tab4:
                 st.subheader('Course Grades Standard Deviation')
-                st.table(v.courses_std_df)
+                st.dataframe(v.courses_std_df)
             # VISUALS
         if mode == 'Visuals':
             graphs = st.sidebar.selectbox("", ('Bar Graph', 'Correlation Heatmap', 'Scatter Matrix'))
