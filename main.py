@@ -62,7 +62,7 @@ def main():
                     fig, ax = plt.subplots()
                     ax.bar(x, y)
                     ax.set_ylim([0, 100])
-                    ax.set_title("Second Semester")
+                    ax.set_title("First Semester")
                     ax.set_xlabel("Course category")
                     ax.set_ylabel("Mean grade")
                     st.pyplot(fig)
