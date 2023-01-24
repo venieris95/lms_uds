@@ -3,7 +3,6 @@ import variables as v
 
 def main():
     if v.check_credentials():
-        v.authenticator.logout("Logout", "sidebar")
         st.sidebar.title("Select Mode")
         mode = st.sidebar.radio("", ("Student Data", "Reviews", "Analytics", "Visuals", "Report"))
         # STUDENT DATA
