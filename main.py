@@ -21,7 +21,7 @@ def main():
                 st.table(v.first_semester.style)
             with tab2:
                 df2 = v.second_semester
-                df2.drop(df2.columns[[11, 12, 15]], axis=1, inplace=True)
+                df2.drop(df2.columns[[13, 14, 15]], axis=1, inplace=True)
                 st.table(df2)
             # REVIEWS
         if mode == "Reviews":
