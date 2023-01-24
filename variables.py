@@ -7,10 +7,8 @@ import numpy as np
 import streamlit as st
 
 def check_credentials():
+    st.text("Credentials: username: hello | password: world")
     """Returns `True` if the user had a correct password."""
-    
-     st.text("Credentials: username: hello | password: world")
-
     def credentials_entered():
         """Checks whether a password entered by the user is correct."""
         if (
