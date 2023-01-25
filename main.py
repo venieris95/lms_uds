@@ -21,7 +21,7 @@ def main():
                 st.dataframe(v.first_semester.style)
             with tab2:
                 df2 = v.second_semester
-                df2.drop(df2.columns[[13, 14, 15]], axis=1, inplace=True)
+                df2.drop(['cs reviews','psy reviews','sociology reviews'], axis=1)
                 st.dataframe(df2)
             # REVIEWS
         if mode == "Reviews":
