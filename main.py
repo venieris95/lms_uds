@@ -25,7 +25,6 @@ def main():
                 st.dataframe(df2)
             # REVIEWS
         if mode == "Reviews":
-            st.sidebar.title("Mode 2: Reviews")
             reviews = st.sidebar.selectbox("", ('Sociology Reviews', 'Psychology Reviews', 'Computer Science Reviews'))
             if reviews == 'Sociology Reviews':
                 v.print_statement(v.soc_reviews, v.sorted_review_soc)
@@ -35,7 +34,6 @@ def main():
                 v.print_statement(v.cs_reviews, v.sorted_review_cs)
             # ANALYSIS
         if mode == 'Analytics':
-            st.sidebar.title("Mode 3: Analysis")
             tab1, tab2, tab3, tab4 = st.tabs(["First Semester", "Second Semester", "Courses Mean",
                                              "Courses Standard Deviation"])
             with tab1:
