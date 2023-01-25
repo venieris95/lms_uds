@@ -20,7 +20,7 @@ def main():
             with tab1:
                 st.dataframe(v.first_semester.style)
             with tab2:
-                v.second_semester.drop('cs reviews', axis = columns)
+                v.second_semester.drop('cs reviews', axis = 'columns')
                 #df2.drop(['cs reviews','psy reviews','sociology reviews'], axis=1)
                 st.dataframe(v.second_semester.style)
             # REVIEWS
