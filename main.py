@@ -20,9 +20,9 @@ def main():
             with tab1:
                 st.dataframe(v.first_semester.style)
             with tab2:
-                df2 = v.second_semester
-                df2.drop(['cs reviews','psy reviews','sociology reviews'], axis=1)
-                st.dataframe(df2)
+                #df2 = v.second_semester
+                #df2.drop(['cs reviews','psy reviews','sociology reviews'], axis=1)
+                st.dataframe(v.second_semester.style)
             # REVIEWS
         if mode == "Reviews":
             st.sidebar.title("Mode 2: Reviews")
