@@ -12,7 +12,7 @@ st.set_page_config("LSM Dashboard", page_icon=":bar_chart:", layout="wide")
 
 def main():
     if v.check_credentials():
-        st.sidebar.title("Select ONE Mode")
+        st.sidebar.title("Select Mode")
         mode = st.sidebar.radio("", ("Student Data", "Reviews", "Analytics", "Visuals", "Report"))
         # STUDENT DATA
         if mode == 'Student Data':
