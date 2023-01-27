@@ -215,3 +215,41 @@ courses_std_list.extend([std(psy_grades_1), std(cs_grades_1), std(soc_grades_1),
 courses_mean_df = {'Course Name': courses_name_list, 'Mean Grade': courses_mean_list}
 courses_std_df = {'Course Name': courses_name_list, 'Grade Standard Deviation': courses_std_list}
 
+# CONVERT TO TEXT
+first_semester_txt = []
+for i in range(len(first_semester)):
+    first_semester_txt.append("Student Name: " + name_1[i])
+    first_semester_txt.append("Overall grade: " + str(overall_1[i]))
+    first_semester_txt.append("Psychology grade: " + str(psy_grades_1[i]))
+    first_semester_txt.append("CS grade: " + str(cs_grades_1[i]))
+    first_semester_txt.append("Sociology grade: " + str(soc_grades_1[i]))
+
+with open("first_semester_grades.txt", 'w') as fsg:
+    fsg.write("\n".join(str(item) for item in first_semester_txt))
+
+second_semester_txt = []
+for i in range(len(second_semester)):
+    second_semester_txt.append("Student Name: " + name_2[i])
+    second_semester_txt.append("Overall grade: " + str(overall_2[i]))
+    second_semester_txt.append("Psychology grade: " + str(psy_grades_2[i]))
+    second_semester_txt.append("CS grade: " + str(cs_grades_2[i]))
+    second_semester_txt.append("Sociology grade: " + str(soc_grades_2[i]))
+
+with open("second_semester_grades.txt", 'w') as ssg:
+    ssg.write("\n".join(str(item) for item in second_semester_txt))
+
+courses_mean_txt = []
+for i in range(len(courses_name_list)):
+    courses_mean_txt.append("Course Name: " + courses_name_list[i])
+    courses_mean_txt.append("Mean Grade: " + str(courses_mean_list[i]))
+
+with open("mean_grades.txt", 'w') as mg:
+    mg.write("\n".join(str(item) for item in courses_mean_txt))
+
+courses_std_txt = []
+for i in range(len(courses_name_list)):
+    courses_mean_txt.append("Course Name: " + courses_name_list[i])
+    courses_mean_txt.append("Course Standard Deviation: " + str(courses_std_list[i]))
+
+with open("standard_deviation_grades.txt", 'w') as stg:
+    stg.write("\n".join(str(item) for item in courses_std_txt))
