@@ -218,6 +218,3 @@ courses_std_list.extend([std(psy_grades_1), std(cs_grades_1), std(soc_grades_1),
 courses_mean_df = {'Course Name': courses_name_list, 'Mean Grade': courses_mean_list}
 courses_std_df = {'Course Name': courses_name_list, 'Grade Standard Deviation': courses_std_list}
 
-
-with open('myfile.txt', 'w') as f:
-    print(first_semester_grades, file=f)
