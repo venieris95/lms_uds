@@ -27,10 +27,13 @@ def main():
         if mode == "Reviews":
             reviews = st.sidebar.selectbox("", ('Sociology Reviews', 'Psychology Reviews', 'Computer Science Reviews'))
             if reviews == 'Sociology Reviews':
+                st.download_button('Download Top words in Sociology Review: (.txt file)', data = my_str, file_name = 'soc_review.txt' )
                 v.print_statement(v.soc_reviews, v.sorted_review_soc)
             if reviews == 'Psychology Reviews':
+                st.download_button('Download Top words in Psychology Review: (.txt file)', data = my_str, file_name = 'psy_review.txt' )
                 v.print_statement(v.psy_reviews, v.sorted_review_psy)
             if reviews == 'Computer Science Reviews':
+                st.download_button('Download Top words in CS Review: (.txt file)', data = my_str, file_name = 'cs_review.txt' )
                 v.print_statement(v.cs_reviews, v.sorted_review_cs)                
                 
             # ANALYSIS
