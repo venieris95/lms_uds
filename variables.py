@@ -200,7 +200,7 @@ second_semester_grades = {'Name': name_2, 'Overall Grade': overall_2,
                           'Psychology Grade': psy_grades_2,
                           'Computer Science Grade': cs_grades_2, 'Sociology Grade': soc_grades_2}
 # LIST OF COURSES, MEAN GRADES AND STANDARD DEVIATIONS
-first_text = np.savetxt(r'c:\data\np.txt', first_semester_grades.values, fmt='%d')
+first_text = first_semester_grades.to_csv('first_semester.txt', sep='\t', index=False)
 courses_name_list = list()
 courses_mean_list = list()
 courses_std_list = list()
