@@ -95,12 +95,14 @@ def sort_words(txt):
 
 
 def print_statement(review, top_words):
-    len_words = len(top_words)
-    st.subheader("Top %i Most used words in this review:" % len_words)
-    for word in range(len_words):
-        st.text(top_words[word])
-    st.download_button('Download Review: (.txt file)', top_words[0:len_words])
-    st.table(review)
+   len_words = len(top_words)
+   st.subheader("Top %i Most used words in this review:" % len_words)
+   top_words_lst = []
+   for i in range(len_words):
+       st.text(top_words[i])
+       top_words_lst.append(top_words[i])
+   st.download_button('Download Review: (.txt file)', top_words_lst)
+   st.table(review)
 
 
 # ANALYSIS
