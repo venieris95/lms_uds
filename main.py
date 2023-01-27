@@ -18,7 +18,6 @@ def main():
                 st.dataframe(v.first_semester.style)
             with tab2:
                 df2 = v.second_semester.drop(columns=['cs reviews', 'psy reviews', 'sociology reviews'])
-                #df2.drop(['cs reviews','psy reviews','sociology reviews'], axis=1)
                 st.dataframe(df2)
             # REVIEWS
         if mode == "Reviews":
@@ -38,7 +37,7 @@ def main():
                 st.subheader('First Semester Student Grades By Course Category')
                 if st.download_button('Download First Semester Student Grades (file .txt)', v.first_semester_txt):
                     with open("first_semester_grades.txt", 'w') as fsg:
-                    fsg.write("\n".join(str(item) for item in first_semester_txt))
+                        fsg.write("\n".join(str(item) for item in first_semester_txt))
                 st.dataframe(v.first_semester_grades)
             with tab2:
                 st.subheader('Second Semester Student Grades By Course Category')
