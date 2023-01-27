@@ -35,19 +35,19 @@ def main():
                                              "Courses Standard Deviation"])
             with tab1:
                 st.subheader('First Semester Student Grades By Course Category')
-                st.download_button('Download First Semester Student Grades (file .txt)', v.fsg)
+                st.download_button('Download First Semester Student Grades (.txt)', v.fsg)
                 st.dataframe(v.first_semester_grades)
             with tab2:
                 st.subheader('Second Semester Student Grades By Course Category')
-                st.download_button('Download First Semester Student Grades (file .txt)', v.ssg)
+                st.download_button('Download Second Semester Student Grades (.txt)', v.ssg)
                 st.dataframe(v.second_semester_grades)
             with tab3:
                 st.subheader('Courses Mean Grades')
-                st.download_button('Download First Semester Student Grades (file .txt)', v.mg)
+                st.download_button('Download Mean Grades (.txt)', v.mg)
                 st.dataframe(v.courses_mean_df)
             with tab4:
                 st.subheader('Course Grades Standard Deviation')
-                st.download_button('Download First Semester Student Grades (file .txt)', v.stg)
+                st.download_button('Download Grades Standard Deviation(.txt)', v.stg)
                 st.dataframe(v.courses_std_df)
             # VISUALS
         if mode == 'Visuals':
