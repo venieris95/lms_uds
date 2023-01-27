@@ -201,7 +201,6 @@ second_semester_grades = {'Name': name_2, 'Overall Grade': overall_2,
                           'Computer Science Grade': cs_grades_2, 'Sociology Grade': soc_grades_2}
 
 # LIST OF COURSES, MEAN GRADES AND STANDARD DEVIATIONS
-
 courses_name_list = list()
 courses_mean_list = list()
 courses_std_list = list()
@@ -218,3 +217,7 @@ courses_std_list.extend([std(psy_grades_1), std(cs_grades_1), std(soc_grades_1),
 # DATA FRAME OF LISTS
 courses_mean_df = {'Course Name': courses_name_list, 'Mean Grade': courses_mean_list}
 courses_std_df = {'Course Name': courses_name_list, 'Grade Standard Deviation': courses_std_list}
+
+
+with open('myfile.txt', 'w') as f:
+    print(first_semester_grades, file=f)
