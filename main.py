@@ -39,9 +39,6 @@ def main():
                                              "Courses Standard Deviation"])
             with tab1:
                 st.subheader('First Semester Student Grades By Course Category')
-                if st.download_button('Download First Semester Grades(.txt file)', data = v.first_semester_grades):
-                    with open('myfile.txt', 'w') as f:
-                        print(v.first_semester_grades, file=f)
                 st.dataframe(v.first_semester_grades)
             with tab2:
                 st.subheader('Second Semester Student Grades By Course Category')
