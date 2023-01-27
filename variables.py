@@ -225,8 +225,7 @@ for i in range(len(first_semester)):
     first_semester_txt.append("CS grade: " + str(cs_grades_1[i]))
     first_semester_txt.append("Sociology grade: " + str(soc_grades_1[i]))
 
-with open("first_semester_grades.txt", 'w') as fsg:
-    fsg.write("\n".join(str(item) for item in first_semester_txt))
+fsg  = "\n".join(str(item) for item in first_semester_txt)
 
 second_semester_txt = []
 for i in range(len(second_semester)):
