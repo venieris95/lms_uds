@@ -31,14 +31,8 @@ def main():
             if reviews == 'Psychology Reviews':
                 v.print_statement(v.psy_reviews, v.sorted_review_psy)
             if reviews == 'Computer Science Reviews':
-                v.print_statement(v.cs_reviews, v.sorted_review_cs)
-            if st.download_button('Download Reports (.txt file)'):
-                f = open('Top 3 words.txt', 'w', encoding='utf-8')
-                f.write("Top 3 most common words in Sociology reviews:")
-                f.write(review_soc)
-                f.write("\nTop 3 most common words in Psychology reviews:")
-                f.write(review_psy)
-                f.write("\nTop 3 most common words in CS reviews:")
+                v.print_statement(v.cs_reviews, v.sorted_review_cs)                
+                
             # ANALYSIS
         if mode == 'Analytics':
             tab1, tab2, tab3, tab4 = st.tabs(["First Semester", "Second Semester", "Courses Mean",
