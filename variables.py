@@ -104,8 +104,7 @@ def print_statement(review, top_words):
    my_str = 'Top words in Review: \n'
    for word in top_words_lst:
        my_str += word + '\n'    
-   title = "hi"
-   st.download_button('Download Top words in Sociology Review: (.txt file)', data = my_str, file_name = title + '.txt' )
+   st.download_button('Download Top words(.txt file)', data = my_str, file_name = title + '.txt' )
    st.table(review)
 
 
