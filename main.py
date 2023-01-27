@@ -8,7 +8,7 @@ import plotly.express as px
 import variables as v
 import seaborn as sns
 
-st.set_page_config("LSM Dashboard", page_icon=":bar_chart:", layout="wide")
+st.set_page_config("LMS Dashboard", page_icon=":bar_chart:", layout="wide")
 
 def main():
     if v.check_credentials():
@@ -32,7 +32,7 @@ def main():
                 v.print_statement(v.psy_reviews, v.sorted_review_psy)
             if reviews == 'Computer Science Reviews':
                 v.print_statement(v.cs_reviews, v.sorted_review_cs)
-            if st.download_button('Download Reports (.txt file)', text_contents):
+            if st.download_button('Download Reports (.txt file)'):
                 f = open('Top 3 words.txt', 'w', encoding='utf-8')
                 f.write("Top 3 most common words in Sociology reviews:")
                 f.write(review_soc)
