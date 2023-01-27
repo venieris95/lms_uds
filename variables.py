@@ -99,6 +99,7 @@ def print_statement(review, top_words):
     st.subheader("Top %i Most used words in this review:" % len_words)
     for word in range(len_words):
         st.text(top_words[word])
+    st.download_button('Download Review: (.txt file)', top_words[0:len_words])
     st.table(review)
 
 
