@@ -199,7 +199,10 @@ first_semester_grades = {'Name': name_1, 'Overall Grade': overall_1,
 second_semester_grades = {'Name': name_2, 'Overall Grade': overall_2,
                           'Psychology Grade': psy_grades_2,
                           'Computer Science Grade': cs_grades_2, 'Sociology Grade': soc_grades_2}
-first_semester_str = str(first_semester_grades)
+first_semester_lst = []
+for item in first_semester_grades:
+    first_semester_lst.append(first_semester_grades.loc[item,:])
+first_semester_str = "\n".join(first_semester_list)
 # LIST OF COURSES, MEAN GRADES AND STANDARD DEVIATIONS
 courses_name_list = list()
 courses_mean_list = list()
