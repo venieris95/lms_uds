@@ -101,10 +101,10 @@ def print_statement(review, top_words):
    for i in range(len_words):
        st.text(top_words[i])
        top_words_lst.append(top_words[i])
-   my_str = ' '
+   my_str = 'Top words in Review: \n'
    for word in top_words_lst:
        my_str += word + '\n'    
-   st.download_button('Download Review: (.txt file)', my_str)
+   st.download_button('Download Top words in %s: (.txt file)' % review, data = my_str, file_name = )
    st.table(review)
 
 
