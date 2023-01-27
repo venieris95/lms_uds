@@ -41,7 +41,7 @@ def main():
                 st.subheader('First Semester Student Grades By Course Category')
                 with open('myfile.txt', 'w') as f:
                         print(first_semester_grades, file=f)
-                st.download_button('Download First Semester Grades(.txt file)', myfile.txt)
+                st.download_button('Download First Semester Grades(.txt file)', data = myfile.txt)
                 st.dataframe(v.first_semester_grades)
             with tab2:
                 st.subheader('Second Semester Student Grades By Course Category')
