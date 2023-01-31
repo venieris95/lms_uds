@@ -77,14 +77,17 @@ def main():
                     ax.set_ylabel("Mean grade")
                     st.pyplot(fig)
             if graphs == 'Correlation Heatmap':
+                st.subheader("Correlation Heatmap")
                 tab1, tab2 = st.tabs(['First Semester', 'Second Semester'])
                 with tab1:
+                    st.subheader("Correlation Heatmap: comparison of correlation between first semester courses")
                     df1 = v.first_semester
                     df1.drop(df1.columns[[0]], axis=1, inplace=True)
                     fig, ax = plt.subplots()
                     sns.heatmap(df1.corr(), ax=ax)
                     st.write(fig)
                 with tab2:
+                    st.subheader("Correlation Heatmap: comparison of correlation between second semester courses")
                     df2 = v.second_semester
                     df2.drop(df2.columns[[0]], axis=1, inplace=True)
                     fig, ax = plt.subplots()
