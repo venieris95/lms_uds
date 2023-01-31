@@ -94,7 +94,7 @@ def main():
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
             if graphs == 'Scatter Plot':
-                colors = [plt.cm.tab10(i/float(len(courses)-1)) for i in range(len(v.courses))]
+                colors = [plt.cm.tab10(i/float(len(v.courses)-1)) for i in range(len(v.courses))]
                 fig = plt.scatter(v.courses)
                 st.write(fig)
      
