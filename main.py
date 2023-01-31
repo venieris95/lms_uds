@@ -94,10 +94,23 @@ def main():
                     fig, ax = plt.subplots()
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
-            #if graphs == 'Line Chart':
-                
-               
-                                                                            
+            if graphs == 'Scatter Matrix':
+                df1 = v.first_semester
+                df2 = v.second_semester
+                fig1 = px.scatter_matrix(v.first_semester, dimensions=["intro to cs I", "machine learning I", "web design I", "absence"],
+                                 # select comparing items/variables
+                title="absence and cs classes (1 semester)",  # title
+                labels={col: col.replace('_', ' ') for col in df1.columns})  # remove underscore step1
+                fig1.update_traces(diagonal_visible=False)  # remove underscore step2
+                fig2 = px.scatter_matrix(df2, dimensions=["intro to computer science", "machine learning", "web design", "absence"],
+                                 # select comparing items/variables
+                title="absence and cs classes (2 semester)",  # title                 
+                labels={col: col.replace('_', ' ') for col in df1.columns})  # remove underscore step1
+                fig2.update_traces(diagonal_visible=False)  # remove underscore step2
+                st.write(fig1)
+                st.write(fig2)
+                st.text("Students who absent from class many times tend to get low score?")
+                st.write("------------------------------------------")  # To divide the section when it is opened                                                            
             # REPORT
         if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
