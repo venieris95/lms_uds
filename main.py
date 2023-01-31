@@ -98,9 +98,9 @@ def main():
                 df1 = v.first_semester
                 df2 = v.second_semester
                 fig = plt.figure()
-                ax1 = fig.add_subplot()
-                ax1.scatter(x = v.overall_1, y = df1["absence"], s=10, c='b', marker="s", label='first_semester')
-                ax1.scatter(x = v.overall_2, y = df2["absence"], s=10, c='r', marker="o", label='second_semester')
+                ax = fig.add_subplot()
+                ax.scatter(x = v.overall_1, y = df1["absence"], s=10, c='b', marker="s", label='first_semester')
+                ax.scatter(x = v.overall_2, y = df2["absence"], s=10, c='r', marker="o", label='second_semester')
                 plt.legend(loc='upper right')
                 ax.set_xlabel("Absences")
                 ax.set_ylabel("Overall grade")
