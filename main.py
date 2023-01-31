@@ -97,9 +97,12 @@ def main():
             if graphs == 'Scatter Plot':
                 df1 = v.first_semester
                 df2 = v.second_semester
-                fig, ax = plt.subplots()
-                sns.scatterplot(x = v.overall_1,y = df1["absence"], ax = ax)
-                st.pyplot(fig)
+                fig = plt.figure()
+                ax1 = fig.add_subplot()
+                ax1.scatter(x = v.overall_1, y = df1[absence], s=10, c='b', marker="s", label='first_semester')
+                ax1.scatter(x = v.overall_2, ,y df2[absence], s=10, c='r', marker="o", label='second_semester')
+                plt.legend(loc='upper left')
+                st.write(fig)
             # REPORT
         if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
