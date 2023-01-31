@@ -175,6 +175,9 @@ urb_soc_2 = second_semester['urban sociology']
 intro_cs_2 = second_semester['intro to computer science']
 ml_2 = second_semester['machine learning']
 webd_2 = second_semester['web design']
+absence_1 = first_semester['absence']
+absence_2 = second_semester['absence']
+absences = (absence_1, absence_2)
 # ALL COURSES TOGETHER
 courses = (cog_psy_1, soc_psy_1, ind_psy_1, intro_soc_1, crim_1, urb_soc_1, intro_cs_1, ml_1, webd_1,
            cog_psy_2, soc_psy_2, ind_psy_2, intro_soc_2, crim_2, urb_soc_2, intro_cs_2, ml_2, webd_2)
