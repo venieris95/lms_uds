@@ -96,9 +96,8 @@ def main():
             if graphs == 'Scatter Plot':
             # Prepare Data 
             # Create as many colors as there are unique midwest['category']
-                courses = np.unique([v.courses])
-                colors = [plt.cm.tab10(i/float(len(courses)-1)) for i in range(len(courses))]
-                fig = plt.scatter(courses, v.absences, c = colors)
+                #colors = [plt.cm.tab10(i/float(len(courses)-1)) for i in range(len(courses))]
+                fig = plt.scatter(v.first_semester_grades, v.absences)
                 st.write(fig)
      
             # REPORT
