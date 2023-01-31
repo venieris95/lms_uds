@@ -97,8 +97,9 @@ def main():
             if graphs == 'Scatter Plot':
                 df1 = v.first_semester
                 df2 = v.second_semester
-                fig1 = sns.scatterplot(x = df1.index, y = v.overall_1, hue = v.overall_2)
-                st.pyplot(fig1)
+                fig, ax = plt.subplots()
+                sns.scatterplot(x = df1.index, y = v.overall_1, hue = v.overall_2, ax = ax)
+                st.pyplot(fig)
             # REPORT
         if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
