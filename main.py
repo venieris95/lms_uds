@@ -53,7 +53,7 @@ def main():
                 st.dataframe(v.courses_std_df)
             # VISUALS
         if mode == 'Visuals 📈':
-            graphs = st.sidebar.selectbox("", ('Bar Graph', 'Correlation Heatmap', 'Scatter Plot'))
+            graphs = st.sidebar.selectbox("", ('Bar Graph', 'Correlation Heatmap', 'Slopechart'))
             if graphs == 'Bar Graph':
                 tab1, tab2 = st.tabs(['First Semester', 'Second Semester'])
                 with tab1:
@@ -94,7 +94,7 @@ def main():
                     fig, ax = plt.subplots()
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
-            if graphs == 'Scatter Plot':
+            if graphs == 'Slopechart':
                 df1 = v.first_semester                    
                 df2 = v.second_semester
                 left_label = [str(c) + ', '+ str(round(y)) for c, y in zip(df1['name'], v.overall_1)]
@@ -108,12 +108,12 @@ def main():
                     return l
 
                 fig, ax = plt.subplots()
-                ax.vlines(x=1, ymin=60, ymax=85, color='black', alpha=0.7, linewidth=1, linestyles='dotted')
-                ax.vlines(x=2, ymin=60, ymax=85, color='black', alpha=0.7, linewidth=1, linestyles='dotted')
-                ax.scatter(y=v.overall_1, x=np.repeat(1, df1.shape[0]), s=10, color='black', alpha=0.7)
-                ax.scatter(y=v.overall_2, x=np.repeat(3, df2.shape[0]), s=10, color='black', alpha=0.7)                                                            
+                ax.vlines(x=1, ymin=60, ymax=85, color='black', alpha=0.7, linewidth=0,5, linestyles='dotted')
+                ax.vlines(x=2, ymin=60, ymax=85, color='black', alpha=0.7, linewidth=0,5, linestyles='dotted')
+                ax.scatter(y=v.overall_1, x=np.repeat(1, s=10, color='black', alpha=0.7)
+                ax.scatter(y=v.overall_2, x=np.repeat(2, s=10, color='black', alpha=0.7)                                                            
                 for p1, p2, c in zip(v.overall_1, v.overall_2, df1['name']):
-                    newline([1,p1], [3,p2])
+                    newline([1,p1], [2,p2])
                     ax.text(1-0.05, p1, c + ', ' + str(round(p1)), horizontalalignment='right', verticalalignment='center')
                     ax.text(3+0.05, p2, c + ', ' + str(round(p2)), horizontalalignment='left', verticalalignment='center')
                                                                             
