@@ -97,7 +97,7 @@ def main():
                 df1 = v.first_semester                    
                 df2 = v.second_semester
                 left_label = [str(c) + ', '+ str(round(y)) for c, y in zip(df1['name'], v.overall_1)]
-                right_label = [str(c) + ', '+ str(round(y)) for c, y in zip(df2['name', v.overall_2)]
+                right_label = [str(c) + ', '+ str(round(y)) for c, y in zip(df2['name'], v.overall_2)]
                 klass = ['red' if (v.overall_1-v.overall_2) < 0 else 'green']
                                                                             
                 def newline(p1, p2, color='black'):
