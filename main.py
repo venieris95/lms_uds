@@ -77,7 +77,6 @@ def main():
                     ax.set_ylabel("Mean grade")
                     st.pyplot(fig)
             if graphs == 'Correlation Heatmap':
-                st.subheader("Correlation Heatmap")
                 tab1, tab2 = st.tabs(['First Semester', 'Second Semester'])
                 with tab1:
                     st.subheader("Correlation Heatmap: comparison of correlation between first semester courses")
