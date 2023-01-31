@@ -120,7 +120,7 @@ def main():
                 ax.text(3+0.05, 13000, 'AFTER', horizontalalignment='left', verticalalignment='center', fontdict={'size':18, 'weight':700})
                                                                             
                 ax.set_title("Slopechart: Comparing student grades between first and second semester", fontdict={'size':22})
-                ax.set(xlim=(0,4), ylim=(0,14000), ylabel='Mean Grade')
+                ax.set(xlim=(0,4), ylim=(0,100), ylabel='Mean Grade')
                 ax.set_xticks([1,3])
                 ax.set_xticklabels(["First Semester", "Second Semester"])
                 plt.yticks(np.arange(0, 100, 10), fontsize=12)
