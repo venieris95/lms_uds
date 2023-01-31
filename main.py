@@ -94,10 +94,8 @@ def main():
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
             if graphs == 'Scatter Plot':
-            # Prepare Data 
-            # Create as many colors as there are unique midwest['category']
-                #colors = [plt.cm.tab10(i/float(len(courses)-1)) for i in range(len(courses))]
-                fig = plt.scatter(v.courses, v.absences)
+                colors = [plt.cm.tab10(i/float(len(courses)-1)) for i in range(len(v.courses))]
+                fig = plt.scatter(v.courses)
                 st.write(fig)
      
             # REPORT
