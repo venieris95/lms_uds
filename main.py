@@ -99,7 +99,7 @@ def main():
                 df2 = v.second_semester
                 fig, ax = plt.subplots()
                 overall_grades = (v.overall_1, v.overall_2)
-                sns.scatterplot(x = df1.index, y = v.overall_1, ax = ax)
+                sns.scatterplot(x = df1["absence"], y = v.overall_1, ax = ax)
                 st.pyplot(fig)
             # REPORT
         if mode == 'Report 🖋️':
