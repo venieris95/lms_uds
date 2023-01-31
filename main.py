@@ -10,7 +10,7 @@ st.set_page_config("LMS Dashboard", page_icon=":bar_chart:", layout="wide")
 def main():
     if v.check_credentials():
         st.sidebar.title("Select Mode")
-        mode = st.sidebar.radio("", ("Student Data", "Reviews", "Analytics", "Visuals", "Report"))
+        mode = st.sidebar.radio("", ("Student Data 🗃️", "Reviews 🗂️", "Analytics 🤖", "Visuals 📈", "Report 🖋️"))
         # STUDENT DATA
         if mode == 'Student Data 🗃️':
             tab1, tab2 = st.tabs(["First Semester", "Second Semester"])
