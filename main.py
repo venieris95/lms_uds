@@ -95,7 +95,7 @@ def main():
                     st.write(fig)
             if graphs == 'Scatter Plot':
                 colors = [plt.cm.tab10(i/float(len(v.courses)-1)) for i in range(len(v.courses))]
-                fig = plt.scatter(v.courses)
+                fig = plt.scatter(v.courses, v.absences)
                 st.write(fig)
      
             # REPORT
