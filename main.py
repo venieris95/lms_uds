@@ -109,8 +109,8 @@ def main():
                 fig, ax = plt.subplots(1,1,figsize=(14,14), dpi= 80)
                 ax.vlines(x=1, ymin=500, ymax=13000, color='black', alpha=0.7, linewidth=1, linestyles='dotted')
                 ax.vlines(x=3, ymin=500, ymax=13000, color='black', alpha=0.7, linewidth=1, linestyles='dotted')
-                ax.scatter(y=v.overall_1, x=np.repeat(1, df.shape[0]), s=10, color='black', alpha=0.7)
-                ax.scatter(y=v.overall_2, x=np.repeat(3, df.shape[0]), s=10, color='black', alpha=0.7)                                                            
+                ax.scatter(y=v.overall_1, x=np.repeat(1, df1.shape[0]), s=10, color='black', alpha=0.7)
+                ax.scatter(y=v.overall_2, x=np.repeat(3, df2.shape[0]), s=10, color='black', alpha=0.7)                                                            
                 for p1, p2, c in zip(v.overall_1, v.overall_2, df1['name']):
                     newline([1,p1], [3,p2])
                     ax.text(1-0.05, p1, c + ', ' + str(round(p1)), horizontalalignment='right', verticalalignment='center', fontdict={'size':14})
