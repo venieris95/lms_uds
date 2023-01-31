@@ -94,7 +94,7 @@ def main():
                     fig, ax = plt.subplots()
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
-            if graphs == 'Line Chart':
+            #if graphs == 'Line Chart':
                 
                
                                                                             
