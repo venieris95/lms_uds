@@ -107,11 +107,7 @@ def main():
                     ax.add_line(l)
                     return l
 
-                fig, ax = plt.subplots()
-                ax.vlines(x=1, ymin=60, ymax=85, alpha=0.7)
-                ax.vlines(x=2, ymin=60, ymax=85, color='black', alpha=0.7)
-                ax.scatter(y=v.overall_1, x=np.repeat(1, s=10, color='black', alpha=0.7)
-                ax.scatter(y=v.overall_2, x=np.repeat(2, s=10, color='black', alpha=0.7)                                                            
+                fig, ax = plt.subplots()                                                           
                 for p1, p2, c in zip(v.overall_1, v.overall_2, df1['name']):
                     newline([1,p1], [2,p2])
                     ax.text(1-0.05, p1, c + ', ' + str(round(p1)), horizontalalignment='right', verticalalignment='center')
