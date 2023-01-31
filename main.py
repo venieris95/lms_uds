@@ -94,31 +94,9 @@ def main():
                     fig, ax = plt.subplots()
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
-            if graphs == 'Slopechart':
-                df1 = v.first_semester                    
-                df2 = v.second_semester
-                left_label = [str(c) + ', '+ str(round(y)) for c, y in zip(df1['name'], v.overall_1)]
-                right_label = [str(c) + ', '+ str(round(y)) for c, y in zip(df2['name'], v.overall_2)]
-                #klass = ['red' if (v.overall_1-v.overall_2) < 0 else 'green']
-                                                                            
-                def newline(p1, p2, color='black'):
-                    ax = plt.gca()
-                    l = mlines.Line2D([p1[0],p2[0]], [p1[1],p2[1]], color='red' if p1[1]-p2[1] > 0 else 'green', marker='o', markersize=6)
-                    ax.add_line(l)
-                    return l
-
-                fig, ax = plt.subplots()                                                           
-                for p1, p2, c in zip(v.overall_1, v.overall_2, df1['name']):
-                    newline([1,p1], [2,p2])
-                    ax.text(1-0.05, p1, c + ', ' + str(round(p1)), horizontalalignment='right', verticalalignment='center')
-                    ax.text(3+0.05, p2, c + ', ' + str(round(p2)), horizontalalignment='left', verticalalignment='center')
-                                                                            
-                ax.set_title("Slopechart: Comparing student grades between first and second semester", fontdict={'size':22})
-                ax.set(xlim=(0,4), ylim=(60,85), ylabel='Mean Grade')
-                ax.set_xticks([1,3])
-                ax.set_xticklabels(["First Semester", "Second Semester"])
-                plt.yticks(np.arange(60, 85, 3), fontsize=12)
-                st.write(fig)
+            if graphs == 'Line Chart':
+                
+               
                                                                             
             # REPORT
         if mode == 'Report 🖋️':
