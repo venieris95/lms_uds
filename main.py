@@ -97,7 +97,7 @@ def main():
             # Prepare Data 
             # Create as many colors as there are unique midwest['category']
                 #colors = [plt.cm.tab10(i/float(len(courses)-1)) for i in range(len(courses))]
-                fig = plt.scatter(v.first_semester_grades, v.absences)
+                fig = plt.scatter(v.courses, v.absences)
                 st.write(fig)
      
             # REPORT
