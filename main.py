@@ -1,6 +1,7 @@
 from stop_words import stopwords
 import streamlit as st
 import matplotlib.pyplot as plt
+import matplotlib.lines as mlines
 import plotly.express as px
 import variables as v
 import seaborn as sns
