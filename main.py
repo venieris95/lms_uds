@@ -109,25 +109,19 @@ def main():
 
                 fig, ax = plt.subplots()
                 ax.vlines(x=1, ymin=0, ymax=100, color='black', alpha=0.7, linewidth=1, linestyles='dotted')
-                ax.vlines(x=3, ymin=0, ymax=100, color='black', alpha=0.7, linewidth=1, linestyles='dotted')
+                ax.vlines(x=2, ymin=0, ymax=100, color='black', alpha=0.7, linewidth=1, linestyles='dotted')
                 ax.scatter(y=v.overall_1, x=np.repeat(1, df1.shape[0]), s=10, color='black', alpha=0.7)
                 ax.scatter(y=v.overall_2, x=np.repeat(3, df2.shape[0]), s=10, color='black', alpha=0.7)                                                            
                 for p1, p2, c in zip(v.overall_1, v.overall_2, df1['name']):
                     newline([1,p1], [3,p2])
-                    ax.text(1-0.05, p1, c + ', ' + str(round(p1)), horizontalalignment='right', verticalalignment='center', fontdict={'size':14})
-                    ax.text(3+0.05, p2, c + ', ' + str(round(p2)), horizontalalignment='left', verticalalignment='center', fontdict={'size':14})
-                ax.text(1-0.05, 13000, 'BEFORE', horizontalalignment='right', verticalalignment='center', fontdict={'size':18, 'weight':700})
-                ax.text(3+0.05, 13000, 'AFTER', horizontalalignment='left', verticalalignment='center', fontdict={'size':18, 'weight':700})
+                    ax.text(1-0.05, p1, c + ', ' + str(round(p1)), horizontalalignment='right', verticalalignment='center')
+                    ax.text(3+0.05, p2, c + ', ' + str(round(p2)), horizontalalignment='left', verticalalignment='center')
                                                                             
                 ax.set_title("Slopechart: Comparing student grades between first and second semester", fontdict={'size':22})
                 ax.set(xlim=(0,4), ylim=(0,100), ylabel='Mean Grade')
                 ax.set_xticks([1,3])
                 ax.set_xticklabels(["First Semester", "Second Semester"])
                 plt.yticks(np.arange(0, 100, 10), fontsize=12)
-                plt.gca().spines["top"].set_alpha(.0)
-                plt.gca().spines["bottom"].set_alpha(.0)
-                plt.gca().spines["right"].set_alpha(.0)
-                plt.gca().spines["left"].set_alpha(.0)
                 st.write(fig)
                                                                             
             # REPORT
