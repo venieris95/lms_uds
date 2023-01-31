@@ -99,8 +99,8 @@ def main():
                 df2 = v.second_semester
                 fig = plt.figure()
                 ax1 = fig.add_subplot()
-                ax1.scatter(x = v.overall_1, y = df1[absence], s=10, c='b', marker="s", label='first_semester')
-                ax1.scatter(x = v.overall_2, y = df2[absence], s=10, c='r', marker="o", label='second_semester')
+                ax1.scatter(x = v.overall_1, y = df1["absence"], s=10, c='b', marker="s", label='first_semester')
+                ax1.scatter(x = v.overall_2, y = df2["absence"], s=10, c='r', marker="o", label='second_semester')
                 plt.legend(loc='upper left')
                 st.write(fig)
             # REPORT
