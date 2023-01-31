@@ -79,21 +79,27 @@ def main():
             if graphs == 'Correlation Heatmap':
                 tab1, tab2 = st.tabs(['First Semester', 'Second Semester'])
                 with tab1:
-                    st.subheader("Correlation Heatmap: comparison of correlation between first semester courses")
+                    st.subheader("Correlation Heatmap: comparison of correlations between first semester courses")
                     df1 = v.first_semester
                     df1.drop(df1.columns[[0]], axis=1, inplace=True)
                     fig, ax = plt.subplots()
                     sns.heatmap(df1.corr(), ax=ax)
                     st.write(fig)
                 with tab2:
-                    st.subheader("Correlation Heatmap: comparison of correlation between second semester courses")
+                    st.subheader("Correlation Heatmap: comparison of correlations between second semester courses")
                     df2 = v.second_semester
                     df2.drop(df2.columns[[0]], axis=1, inplace=True)
                     fig, ax = plt.subplots()
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
-            if graphs == 'Scatter Matrix':
-                st.write("TODO")
+            if graphs == 'Scatter Plot':
+            # Prepare Data 
+            # Create as many colors as there are unique midwest['category']
+                courses = np.unique([v.courses])
+                colors = [plt.cm.tab10(i/float(len(courses)-1)) for i in range(len(courses))]
+                fig = plt.scatter(courses, v.absences, c = colors)
+                st.write(fig)
+     
             # REPORT
         if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
