@@ -87,7 +87,7 @@ def main():
                 with tab2:
                     df2 = v.second_semester
                     df2.drop(df2.columns[[0]], axis=1, inplace=True)
-                    fig, ax = plt.subplots(figsize=(1, 1))
+                    fig, ax = plt.subplots()
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
             if graphs == 'Scatter Matrix':
