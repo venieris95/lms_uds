@@ -12,7 +12,7 @@ def main():
         st.sidebar.title("Select Mode")
         mode = st.sidebar.radio("", ("Student Data", "Reviews", "Analytics", "Visuals", "Report"))
         # STUDENT DATA
-        if mode == 'Student Data':
+        if mode == 'Student Data 🗃️':
             tab1, tab2 = st.tabs(["First Semester", "Second Semester"])
             with tab1:
                 st.dataframe(v.first_semester.style)
@@ -20,7 +20,7 @@ def main():
                 df2 = v.second_semester.drop(columns=['cs reviews', 'psy reviews', 'sociology reviews'])
                 st.dataframe(df2)
             # REVIEWS
-        if mode == "Reviews":
+        if mode == "Reviews 🗂️":
             reviews = st.sidebar.selectbox("", ('Sociology Reviews', 'Psychology Reviews', 'Computer Science Reviews'))
             if reviews == 'Sociology Reviews':
                 v.print_statement(v.soc_reviews, v.sorted_review_soc)
@@ -30,7 +30,7 @@ def main():
                 v.print_statement(v.cs_reviews, v.sorted_review_cs)                
                 
             # ANALYSIS
-        if mode == 'Analytics':
+        if mode == 'Analytics 🤖':
             tab1, tab2, tab3, tab4 = st.tabs(["First Semester", "Second Semester", "Courses Mean",
                                              "Courses Standard Deviation"])
             with tab1:
@@ -50,7 +50,7 @@ def main():
                 st.download_button('Download Grades Standard Deviation(.txt)', v.stg)
                 st.dataframe(v.courses_std_df)
             # VISUALS
-        if mode == 'Visuals':
+        if mode == 'Visuals 📈':
             graphs = st.sidebar.selectbox("", ('Bar Graph', 'Correlation Heatmap', 'Scatter Matrix'))
             if graphs == 'Bar Graph':
                 tab1, tab2 = st.tabs(['First Semester', 'Second Semester'])
@@ -93,7 +93,7 @@ def main():
             if graphs == 'Scatter Matrix':
                 st.write("TODO")
             # REPORT
-        if mode == 'Report':
+        if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
             text_contents = 'Students are struggling with CS. Btw, We can report here !!! I like Sushi since it has a lot ' \
                             'of nutrition... '
