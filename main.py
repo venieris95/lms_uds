@@ -123,7 +123,7 @@ def main():
                 ax.set(xlim=(0,4), ylim=(0,14000), ylabel='Mean Grade')
                 ax.set_xticks([1,3])
                 ax.set_xticklabels(["First Semester", "Second Semester"])
-                plt.yticks(np.arange(500, 13000, 2000), fontsize=12)
+                plt.yticks(np.arange(0, 100, 10), fontsize=12)
                 plt.gca().spines["top"].set_alpha(.0)
                 plt.gca().spines["bottom"].set_alpha(.0)
                 plt.gca().spines["right"].set_alpha(.0)
