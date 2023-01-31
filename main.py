@@ -97,7 +97,7 @@ def main():
             if graphs == 'Scatter Plot':
                 df1 = v.first_semester
                 df2 = v.second_semester
-                fig1 = sns.scatterplot(x = df1.index, y = v.overall_1, hue = v.overall_1, v.overall_2)
+                fig1 = sns.scatterplot(x = df1.index, y = v.overall_1, hue = v.overall_2)
                 st.write(fig1)
             # REPORT
         if mode == 'Report 🖋️':
