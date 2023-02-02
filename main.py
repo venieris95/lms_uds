@@ -98,8 +98,8 @@ def main():
                 df1 = v.first_semester
                 df2 = v.second_semester
                 fig, ax = plt.subplots()
-                ax.plot(v.overall_1, df1["absence"], '-b', label='first_semester')
-                ax.plot(v.overall_2, df2["absence"], '-r', label='second_semester')
+                ax.plot(v.psy_grades_1, df1["absence"], '-b', label='first_semester')
+                ax.plot(v.psy_grades_2, df2["absence"], '-r', label='second_semester')
                 ax.set_xlabel("Overall grade")
                 ax.set_ylabel("Absences")
                 st.write(fig)
