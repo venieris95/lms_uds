@@ -97,11 +97,9 @@ def main():
             if graphs == 'Scatter Plot':
                 df1 = v.first_semester
                 df2 = v.second_semester
-                fig = plt.figure()
-                ax = fig.add_subplot()
-                ax.plot(v.mean(v.overall_1), v.mean(df1["absence"]), '-b', label='first_semester')
-                ax.plot(v.mean(v.overall_2), v.mean(df2["absence"]), '-r', label='second_semester')
-                plt.legend(loc='upper right')
+                fig, ax = plt.subplots()
+                ax.plot(v.mean(v.overall_1), df1["absence"], '-b', label='first_semester')
+                ax.plot(v.mean(v.overall_2), df2["absence"], '-r', label='second_semester')
                 ax.set_xlabel("Overall grade")
                 ax.set_ylabel("Absences")
                 st.write(fig)
