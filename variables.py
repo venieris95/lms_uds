@@ -239,6 +239,6 @@ mg = "\n".join(str(item) for item in courses_mean_txt)
 
 courses_std_txt = []
 for i in range(len(courses_name_list)):
-    courses_mean_txt.append("Course Name: " + courses_name_list[i])
-    courses_mean_txt.append("Course Standard Deviation: " + str(courses_std_list[i]))
+    courses_std_txt.append("Course Name: " + courses_name_list[i])
+    courses_std_txt.append("Course Standard Deviation: " + str(courses_std_list[i]))
 stg = "\n".join(str(item) for item in courses_std_txt)
