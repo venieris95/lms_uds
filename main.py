@@ -98,8 +98,8 @@ def main():
                 df1 = v.first_semester
                 df2 = v.second_semester
                 fig, ax = plt.subplots()
-                ax.plot(sorted(df1["absence"]), sorted(v.psy_grades_1), '-b', label='first_semester')
-                ax.plot(sorted(df2["absence"]), sorted(v.psy_grades_2), '-r', label='second_semester')
+                ax.plot(sorted(df1["absence"]), v.psy_grades_1, '-b', label='first_semester')
+                ax.plot(sorted(df2["absence"]), v.psy_grades_2, '-r', label='second_semester')
                 ax.set_xlabel("Overall grade")
                 ax.set_ylabel("Absences")
                 st.write(fig)
