@@ -99,8 +99,8 @@ def main():
                 df2 = v.second_semester
                 fig = plt.figure()
                 ax = fig.add_subplot()
-                ax.plot(v.overall_1, df1["absence"], '-b', label='first_semester')
-                ax.plot(v.overall_2, df2["absence"], '-r', label='second_semester')
+                ax.plot(mean(v.overall_1), mean(df1["absence"]), '-b', label='first_semester')
+                ax.plot(mean(v.overall_2), mean(df2["absence"]), '-r', label='second_semester')
                 plt.legend(loc='upper right')
                 ax.set_xlabel("Overall grade")
                 ax.set_ylabel("Absences")
