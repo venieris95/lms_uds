@@ -6,7 +6,6 @@ import plotly.express as px
 import variables as v
 import seaborn as sns
 import numpy as np
-import pandas as pd
 
 st.set_page_config("LMS Dashboard", page_icon=":bar_chart:", layout="wide")
 
