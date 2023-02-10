@@ -96,9 +96,9 @@ def main():
                     st.write(fig)
             if graphs == 'Line Graph':
                 fig, ax = plt.subplots()
-                x = sorted(v.absence_1)
+                x = v.absence_1
                 y = v.overall_1
-                ax.plot(x,y)
+                ax.scatter(x,y)
                 plt.title("Test")
                 plt.xlabel('Absences')
                 plt.ylabel('Overall Grade')
