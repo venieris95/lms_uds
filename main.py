@@ -96,12 +96,12 @@ def main():
                     st.write(fig)
             if graphs == 'Line Graph':
                 fig, ax = plt.subplots()
-                x = v.absence_1
-                y = v.overall_1
+                y = v.absence_1
+                x = v.overall_1
                 ax.scatter(x,y)
                 plt.title("Test")
-                plt.xlabel('Absences')
-                plt.ylabel('Overall Grade')
+                plt.ylabel('Absences')
+                plt.xlabel('Overall Grade')
                 st.pyplot(fig)
             if graphs == 'Scatter Matrix':
                 df1 = v.first_semester
