@@ -96,7 +96,7 @@ def main():
                     st.write(fig)
             if graphs == 'Line Graph':
                 fig, ax = plt.subplots()
-                x = v.absence_1
+                x = sorted(v.absence_1)
                 y = v.overall_1
                 ax.plot(x,y)
                 plt.title("Test")
