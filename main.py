@@ -108,7 +108,9 @@ def main():
                 plt.xlabel('Overall Grade')
                 max1 = max(max(y1), max(x1)) 
                 id_line = plt.plot([0, max1], [0,max1])
-                st.pyplot(fig1, fig2, id_line)
+                st.write(fig1)
+                st.wrte(fig2)
+                st.write(id_line)
             if graphs == 'Scatter Matrix':
                 df1 = v.first_semester
                 df2 = v.second_semester
