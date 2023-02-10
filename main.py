@@ -98,19 +98,16 @@ def main():
                 fig1, ax1 = plt.subplots()
                 y1 = v.absence_1
                 x1 = v.overall_1
-                fig2, ax2 = plt.subplots()
                 y2 = v.absence_2
                 x2 = v.overall_2
-                ax1.scatter(x1,y1)
-                ax2.scatter(x2,y2)
+                ax1.scatter(x1,y1, c='b')
+                ax1.scatter(x2,y2, c'r')
                 plt.title("Test")
                 plt.ylabel('Absences')
                 plt.xlabel('Overall Grade')
                 max1 = max(max(y1), max(x1)) 
-                id_line = plt.plot([0, max1], [0,max1])
+                ax1.plot([0, max1], [0,max1])
                 st.write(fig1)
-                st.wrte(fig2)
-                st.write(id_line)
             if graphs == 'Scatter Matrix':
                 df1 = v.first_semester
                 df2 = v.second_semester
