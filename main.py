@@ -101,12 +101,14 @@ def main():
                 fig2, ax2 = plt.subplots()
                 y2 = v.absence_2
                 x2 = v.overall_2
-                ax1.plot(x,y)
+                ax1.scatter(x1,y1)
+                ax2.scatter(x2,y2)
                 plt.title("Test")
                 plt.ylabel('Absences')
                 plt.xlabel('Overall Grade')
                 max1 = max(max(y1), max(x1)) 
-                st.pyplot(fig1, fig2)
+                id_line = plt.plot([0, max1], [0,max1])
+                st.pyplot(fig1, fig2, id_line)
             if graphs == 'Scatter Matrix':
                 df1 = v.first_semester
                 df2 = v.second_semester
