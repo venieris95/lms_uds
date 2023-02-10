@@ -98,7 +98,7 @@ def main():
                 fig, ax = plt.subplots()
                 x = v.absence_1
                 y = v.overall_1
-                ax.bar(x,y)
+                ax.scatter(x,y)
                 plt.title("Test")
                 plt.xlabel('Absences')
                 plt.ylabel('Overall Grade')
