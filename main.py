@@ -129,11 +129,7 @@ def main():
             # REPORT
         if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
-            text_contents = 'Students are struggling with CS. Btw, We can report here !!! I like Sushi since it has a lot ' \
-                            'of nutrition... '
-            st.write(text_contents)
-
-            if st.download_button('Download overall report (.txt file)', text_contents):
+            if st.download_button('Press the button to download overall report (.txt file)', Report.txt):
                 st.write('Thanks for downloading!')
 
 if __name__ == "__main__":
