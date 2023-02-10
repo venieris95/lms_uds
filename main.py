@@ -129,7 +129,7 @@ def main():
             # REPORT
         if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
-            text = pd.read_csv(https://github.com/venieris95/lms_uds/blob/82981f9090bc8c1ebf1a1152986b83ea60f45811/Report.txt)
+            text = pd.read_csv("https://github.com/venieris95/lms_uds/blob/82981f9090bc8c1ebf1a1152986b83ea60f45811/Report.txt")
             if st.download_button('Press the button to download overall report (.txt file)', text):
                 st.write('Thanks for downloading!')
 
