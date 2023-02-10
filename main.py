@@ -129,7 +129,7 @@ def main():
             # REPORT
         if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
-            text = ("https://github.com/venieris95/lms_uds/blob/55fc64a56cac8d55b494c4d110e78f349ae2c3bb/Report.txt")
+            text = https://github.com/venieris95/lms_uds/blob/55fc64a56cac8d55b494c4d110e78f349ae2c3bb/Report.txt
             if st.download_button('Press the button to download overall report (.txt file)', text):
                 st.write('Thanks for downloading!')
 
