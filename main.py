@@ -106,7 +106,7 @@ def main():
                 plt.ylabel('Absences')
                 plt.xlabel('Overall Grade')
                 max1 = max(max(y1), max(x1)) 
-                ax1.plot([70, max1], [0,max1])
+                ax1.plot([60, max1], [0,max1])
                 st.write(fig1)
             if graphs == 'Scatter Matrix':
                 df1 = v.first_semester
