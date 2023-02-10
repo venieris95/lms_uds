@@ -5,7 +5,6 @@ import matplotlib.lines as mlines
 import plotly.express as px
 import variables as v
 import seaborn as sns
-import Report.txt
 import numpy as np
 
 st.set_page_config("LMS Dashboard", page_icon=":bar_chart:", layout="wide")
@@ -130,7 +129,7 @@ def main():
             # REPORT
         if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
-            text = Report.txt
+            text = https://github.com/venieris95/lms_uds/blob/82981f9090bc8c1ebf1a1152986b83ea60f45811/Report.txt
             if st.download_button('Press the button to download overall report (.txt file)', text):
                 st.write('Thanks for downloading!')
 
