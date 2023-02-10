@@ -99,7 +99,7 @@ def main():
                 plt.title("Test")
                 plt.xlabel('Absences')
                 plt.ylabel('Overall Grade')
-                st.write(fig)
+                st.pyplot(fig)
             if graphs == 'Scatter Matrix':
                 df1 = v.first_semester
                 df2 = v.second_semester
