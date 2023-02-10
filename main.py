@@ -101,6 +101,8 @@ def main():
                 plt.ylabel('Overall Grade')
                 st.write(fig)
             if graphs == 'Scatter Matrix':
+                df1 = v.first_semester
+                df2 = v.second_semester
                 fig1 = px.scatter_matrix(df1,
                                  dimensions=["intro to cs I", "machine learning I", "web design I", "absence"],
                                  # select comparing items/variables
