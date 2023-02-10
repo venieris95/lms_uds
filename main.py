@@ -128,7 +128,6 @@ def main():
                 st.write(fig2)
             # REPORT
         if mode == 'Report 🖋️':
-            st.sidebar.title("Mode 5: Report")
             text = open("Report.txt", "r")
             if st.download_button('Press the button to download overall report (.txt file)', text):
                 st.write('Thanks for downloading!')
