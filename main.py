@@ -94,15 +94,19 @@ def main():
                     fig, ax = plt.subplots()
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
-            if graphs == 'Line Graph':
-                fig, ax = plt.subplots()
-                y = v.absence_1
-                x = v.overall_1
-                ax.plot(x,y)
+            if graphs == 'Scatter Plot':
+                fig1, ax1 = plt.subplots()
+                y1 = v.absence_1
+                x1 = v.overall_1
+                fig2, ax2 = plt.subplots()
+                y2 = v.absence_2
+                x2 = v.overall_2
+                ax1.plot(x,y)
                 plt.title("Test")
                 plt.ylabel('Absences')
                 plt.xlabel('Overall Grade')
-                st.pyplot(fig)
+                max1 = max(max(y1), max(x1)) 
+                st.pyplot(fig1, fig2)
             if graphs == 'Scatter Matrix':
                 df1 = v.first_semester
                 df2 = v.second_semester
