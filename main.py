@@ -102,7 +102,8 @@ def main():
                 x2 = v.overall_2
                 ax1.scatter(x1, y1, c='b', label='first semester')
                 ax1.scatter(x2, y2, c='r', label='second semester')
-                plt.title("Test")
+                plt.legend(loc='best')
+                plt.title("Scatter plot of absences and Overall grade")
                 plt.ylabel('Absences')
                 plt.xlabel('Overall Grade')
                 ax1.plot([60, 85], [0,10])
