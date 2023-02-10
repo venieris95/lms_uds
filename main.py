@@ -53,7 +53,7 @@ def main():
                 st.dataframe(v.courses_std_df)
             # VISUALS
         if mode == 'Visuals 📈':
-            graphs = st.sidebar.selectbox("", ('Bar Graph', 'Correlation Heatmap', 'Line Graph', 'Scatter Matrix'))
+            graphs = st.sidebar.selectbox("", ('Bar Graph', 'Correlation Heatmap', 'Scatter Plot', 'Scatter Matrix'))
             if graphs == 'Bar Graph':
                 tab1, tab2 = st.tabs(['First Semester', 'Second Semester'])
                 with tab1:
