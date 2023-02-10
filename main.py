@@ -5,6 +5,7 @@ import matplotlib.lines as mlines
 import plotly.express as px
 import variables as v
 import seaborn as sns
+import Report.txt
 import numpy as np
 
 st.set_page_config("LMS Dashboard", page_icon=":bar_chart:", layout="wide")
