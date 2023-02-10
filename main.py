@@ -95,7 +95,10 @@ def main():
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
             if graphs == 'Line Graph':
-                fig, ax = plt.subplots(v.absence_1, v.overall_1)
+                fig, ax = plt.subplots()
+                x = v.absence_1
+                y = v.overall_1
+                ax.plot(x,y)
                 plt.title("Test")
                 plt.xlabel('Absences')
                 plt.ylabel('Overall Grade')
