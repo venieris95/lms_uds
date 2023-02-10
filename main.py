@@ -53,7 +53,7 @@ def main():
                 st.dataframe(v.courses_std_df)
             # VISUALS
         if mode == 'Visuals 📈':
-            graphs = st.sidebar.selectbox("", ('Bar Graph', 'Correlation Heatmap', 'Scatter Plot'))
+            graphs = st.sidebar.selectbox("", ('Bar Graph', 'Correlation Heatmap', 'Line Graph', 'Scatter Matrix'))
             if graphs == 'Bar Graph':
                 tab1, tab2 = st.tabs(['First Semester', 'Second Semester'])
                 with tab1:
@@ -94,15 +94,28 @@ def main():
                     fig, ax = plt.subplots()
                     sns.heatmap(df2.corr(), ax=ax)
                     st.write(fig)
-            if graphs == 'Scatter Plot':
-                df1 = v.first_semester
-                df2 = v.second_semester
-                fig, ax = plt.subplots()
-                ax.plot(sorted(df1["absence"]), v.psy_grades_1, '-b', label='first_semester')
-                ax.plot(sorted(df2["absence"]), v.psy_grades_2, '-r', label='second_semester')
-                ax.set_xlabel("Overall grade")
-                ax.set_ylabel("Absences")
+            if graphs == 'Line Graph':
+                fig = plt.plot(v.absence_1, v.overall_1)
+                plt.title("Test")
+                plt.xlabel('Absences')
+                plt.ylabel('Overall Grade')
                 st.write(fig)
+            if graphs == 'Scatter Matrix':
+                fig1 = px.scatter_matrix(df1,
+                                 dimensions=["intro to cs I", "machine learning I", "web design I", "absence"],
+                                 # select comparing items/variables
+                                 title="absence and cs classes (1 semester)",  # title
+                                 labels={col: col.replace('_', ' ') for col in df1.columns})  # remove underscore step1
+                fig1.update_traces(diagonal_visible=False)  # remove underscore step2
+
+                fig2 = px.scatter_matrix(df2,
+                                 dimensions=["intro to computer science", "machine learning", "web design", "absence"],
+                                 # select comparing items/variables
+                                 title="absence and cs classes (2 semester)",  # title
+                                 labels={col: col.replace('_', ' ') for col in df1.columns})  # remove underscore step1
+                fig2.update_traces(diagonal_visible=False)  # remove underscore step2
+                st.write(fig1)
+                st.write(fig2)
             # REPORT
         if mode == 'Report 🖋️':
             st.sidebar.title("Mode 5: Report")
