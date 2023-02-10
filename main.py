@@ -101,7 +101,7 @@ def main():
                 y2 = v.absence_2
                 x2 = v.overall_2
                 ax1.scatter(x1,y1, c='b')
-                ax1.scatter(x2,y2, c'r')
+                ax1.scatter(x2,y2, c='r')
                 plt.title("Test")
                 plt.ylabel('Absences')
                 plt.xlabel('Overall Grade')
